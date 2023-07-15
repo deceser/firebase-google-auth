@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* some code should be added in the future */
+}
+
+a {
+  color: rgba(240, 248, 255, 0.644);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+
+  text-decoration: none;
+  font-style: normal;
+  transition: ease-in-out 0.3s;
+
+  &:hover {
+    color: mediumspringgreen;
+    transition: ease-in-out 0.5s;
+  }
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
