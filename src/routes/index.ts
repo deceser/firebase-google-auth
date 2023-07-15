@@ -1,5 +1,12 @@
-export const publicRoutes = [
-  // some code should be added in the future
+import Main from "src/pages/main";
+
+import { IRoute } from "src/models/route";
+
+export const publicRoutes: IRoute[] = [
+  {
+    path: "/",
+    component: Main,
+  },
 ];
 
 export const privatRoutes = [

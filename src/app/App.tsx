@@ -1,9 +1,15 @@
+import AppRouter from "./AppRouter";
+
 import "./App.css";
 
 type Props = {};
 
 const App = (props: Props) => {
-  return <h1>Firebase Google Auth</h1>;
+  return (
+    <>
+      <AppRouter />
+    </>
+  );
 };
 
 export default App;
