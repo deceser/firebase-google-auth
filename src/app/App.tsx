@@ -1,14 +1,14 @@
 import AppRouter from "./AppRouter";
 
-import "./App.css";
+import DefaultLayout from "src/layouts/default";
 
 type Props = {};
 
 const App = (props: Props) => {
   return (
-    <>
+    <DefaultLayout>
       <AppRouter />
-    </>
+    </DefaultLayout>
   );
 };
 
