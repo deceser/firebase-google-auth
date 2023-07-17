@@ -1,29 +1,31 @@
 .footer__wrapper {
   width: 100%;
-  padding: 40px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background: black;
-  backdrop-filter: blur(50px);
+  background: inherit;
 
   @media (max-width: 768px) {
     /* mobile */
     height: auto;
     padding: 20px;
+    transition: padding 0.5s ease-in-out;
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
     /* tablet */
     height: auto;
     padding: 30px;
+    transition: padding 0.5s ease-in-out;
   }
 
   @media (min-width: 1025px) {
     /* desktop */
     margin: auto;
+    padding: 30px;
+    transition: padding 0.5s ease-in-out;
   }
 
   .footer {
@@ -63,7 +65,7 @@
         line-height: 120%;
         letter-spacing: -0.02em;
 
-        color: rgba(255, 255, 255, 0.2);
+        color: rgba(0, 0, 0, 0.9);
       }
     }
   }
