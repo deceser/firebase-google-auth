@@ -3,25 +3,33 @@
   height: calc(100vh - 100px);
   margin: auto;
 
+  @media (min-width: 375px) {
+    width: 90%;
+    max-width: 576px;
+    height: calc(100vh - 86px - 57px);
+  }
+
   @media (min-width: 576px) {
     width: 90%;
     max-width: 576px;
-    height: calc(100vh - 62px - 56px);
+    height: calc(100vh - 86px - 57px);
   }
 
   @media (min-width: 768px) {
     width: 80%;
     max-width: 768px;
-    height: calc(100vh - 82px - 74px);
+    height: calc(100vh - 106px - 77px);
   }
 
   @media (min-width: 992px) {
     width: 70%;
     max-width: 992px;
+    height: calc(100vh - 106px - 77px);
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     width: 60%;
     max-width: 1210px;
+    height: calc(100vh - 86px - 77px);
   }
 }
