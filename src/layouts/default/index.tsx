@@ -1,5 +1,8 @@
 import React from "react";
 
+import TheHeader from "src/components/block/header";
+import TheFooter from "src/components/block/footer";
+
 import style from "./index.module.scss";
 
 type Props = {
@@ -8,7 +11,13 @@ type Props = {
 
 const DefaultLayout: React.FC<Props> = ({ children, ...props }) => {
   const {} = props;
-  return <main className={style.layoutDefault}>{children}</main>;
+  return (
+    <>
+      <TheHeader />
+      <main className={style.layoutDefault}>{children}</main>
+      <TheFooter />
+    </>
+  );
 };
 
 export default DefaultLayout;
