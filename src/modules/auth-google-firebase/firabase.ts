@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: import.meta.env.VITE_REACT_APP_apiKey,
   authDomain: import.meta.env.VITE_REACT_APP_authDomain,
   projectId: import.meta.env.VITE_REACT_APP_projectId,
@@ -10,6 +10,8 @@ export const firebaseConfig = {
   appId: import.meta.env.VITE_REACT_APP_appId,
   measurementId: import.meta.env.VITE_REACT_APP_measurementId,
 };
+
+export default firebaseConfig;
 
 firebase.initializeApp(firebaseConfig);
 
