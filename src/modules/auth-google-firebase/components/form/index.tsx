@@ -1,14 +1,15 @@
 import React from "react";
+
 import { googleProvider, auth } from "../../firabase";
-import style from "./index.module.scss";
 import { IUser } from "src/models/user";
+
+import style from "./index.module.scss";
 
 const AuthGoogleFirebase: React.FC = () => {
   const [user, setUser] = React.useState<IUser | null>(null);
 
   const handleGoogleLogin = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event?.preventDefault();
-    console.log("sdasdasd");
 
     try {
       const result = await auth.signInWithPopup(googleProvider);
@@ -28,16 +29,10 @@ const AuthGoogleFirebase: React.FC = () => {
 
   return (
     <form className={style.form}>
-      {user ? (
-        <div>
-          <h1>Welcome, {user.displayName}!</h1>
-          <img src={user.photoURL} alt="Profile" />
-        </div>
-      ) : (
-        <button className="default-btn" onClick={handleGoogleLogin}>
-          Google
-        </button>
-      )}
+      <h1>Welcome test-app!</h1>
+      <button className="default-btn" onClick={handleGoogleLogin}>
+        Google auth
+      </button>
     </form>
   );
 };
