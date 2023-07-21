@@ -1,15 +1,16 @@
-// QRCodeComponent.tsx
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import QRCode from "qrcode";
+
+import style from "./index.module.scss";
 
 interface QRCodeProps {
   url: string;
 }
 
 const QRCodeComponent: React.FC<QRCodeProps> = ({ url }) => {
-  const qrcodeRef = useRef<HTMLCanvasElement>(null);
+  const qrcodeRef = React.useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (qrcodeRef.current) {
       QRCode.toCanvas(qrcodeRef.current, url, (error: any) => {
         if (error) {
@@ -19,7 +20,7 @@ const QRCodeComponent: React.FC<QRCodeProps> = ({ url }) => {
     }
   }, [url]);
 
-  return <canvas ref={qrcodeRef}></canvas>;
+  return <canvas ref={qrcodeRef} className={style.qrcode}></canvas>;
 };
 
 export { QRCodeComponent };
